@@ -1,0 +1,35 @@
+{
+  "name": "qne",
+  "version": "0.0.1",
+  "description": "Questionnaire Service",
+  "main": "dist/server/index.js",
+  "dependencies": {
+    "koa": "^2.0.0",
+    "koa-logger": "^2.0.0",
+    "koa-router": "^2.4.4"
+  },
+  "devDependencies": {
+    "raw-loader": "^0.5.1",
+    "rimraf": "^2.5.4",
+    "ts-loader": "^0.8.2",
+    "typescript": "^2.0.0-beta",
+    "webpack": "^2.1.0-beta.20",
+    "webpack-merge": "^0.13.0"    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filosofianakatemia/qne.git"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "webpack"
+  },
+  "contributors": [
+    "Timo Tiuraniemi <timo.tiuraniemi@iki.fi>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/filosofianakatemia/qne/issues"
+  },
+  "homepage": "http://qne.io"
+}
