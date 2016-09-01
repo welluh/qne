@@ -29,5 +29,4 @@ to generate
 ### Visual Studio Code
 
 We recommend installing these extensions for [Visual Studio Code](https://code.visualstudio.com/):
-* [WallabyJS](https://marketplace.visualstudio.com/items?itemName=WallabyJs.wallaby-vscode)
-* [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) plugin to get correct settings.
+* [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
