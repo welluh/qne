@@ -27,7 +27,7 @@
     "url": "git+https://github.com/filosofianakatemia/qne.git"
   },
   "scripts": {
-    "clean": "rimraf build && rimraf dist",
+    "clean": "rimraf build && rimraf dist && rimraf typings",
     "prebuild": "npm run clean",
     "build": "tsc && cp -R build/src dist",
     "postinstall": "typings install"
