@@ -1,0 +1,33 @@
+{
+  "name": "qne-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Questionnaire Service – Root",
+  "devDependencies": {
+    "concurrently": "^2.2.0",
+    "nodemon": "^1.10.2",
+    "npm-workspace": "^0.6.2"
+  },
+  "scripts": {
+    "clean": "cd ./core && npm run clean && cd ../server && npm run clean && cd .. && npm-workspace clean",
+    "start": "npm install && npm-workspace install",
+    "TESTstart": "concurrently \"cd ./core && npm start\" \"cd ./server && npm start\" ",
+    "TESTbuild-core": "cd core && npm install",
+    "TESTbuild-server": "cd server && npm install",
+    "TESTwatch-core-test": "nodemon -e js,json,handlebars node_modules/mocha/bin/mocha core/test/ --recursive --growl --reporter spec",
+    "TESTwatch-client-test": "nodemon -e js,json,handlebars node_modules/mocha/bin/mocha core/test/ --recursive --growl --reporter spec",
+    "TESTwatch-server-test": "nodemon -e js,json,handlebars node_modules/mocha/bin/mocha core/test/ --recursive --growl --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filosofianakatemia/qne.git"
+  },
+  "contributors": [
+    "Timo Tiuraniemi <timo.tiuraniemi@iki.fi>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/filosofianakatemia/qne/issues"
+  },
+  "homepage": "http://qne.io"
+}

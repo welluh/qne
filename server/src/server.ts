@@ -1,5 +1,7 @@
-import * as Koa from "koa"
-import * as Logger from "koa-logger"
+import * as Koa from 'koa'
+import * as logger from 'koa-logger'
+import api from './api'
+import {initializeQneCore, QneCore} from 'qne-core';
 
 const config = {
   port: 3000,
@@ -9,17 +11,16 @@ const config = {
 /**
  * setup Koa
  */
-const app = new Koa();
+const app: Koa = new Koa();
 
 // debugging setup
 
 if (config.debug){
-  //app.use(new Logger());
+  app.use(logger());
 }
 
 // add server API
-
-//require('./api.js')(config, app);
+//api(config, app);
 
 // listen
 app.listen(config.port);
