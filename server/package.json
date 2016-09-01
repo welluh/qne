@@ -3,19 +3,20 @@
   "version": "0.0.1",
   "description": "Questionnaire Service",
   "main": "dist/server/index.js",
+  "engines": {
+    "node": ">= 6"
+  },
   "dependencies": {
     "koa": "^2.0.0",
     "koa-bodyparser": "^3.2.0",
     "koa-logger": "^2.0.0",
-    "koa-route": "^3.2.0"
-  },
-  "peerDependencies": {
+    "koa-route": "^3.2.0",
     "qne-core": "0.0.1"
   },
   "devDependencies": {
     "raw-loader": "^0.5.1",
     "rimraf": "^2.5.4",
-    "ts-loader": "^0.8.2",
+    "ts-loader": "^0.8.1",
     "typescript": "^2.0.0-beta",
     "typings": "^1.3.2",
     "webpack": "^2.1.0-beta.20",

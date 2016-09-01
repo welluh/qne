@@ -1,5 +1,7 @@
 {
   "links": {
-    "server": "core"
+    "qne-core": "core",
+    "qne": "server",
+    "qne-client": "client"
   }
 }

@@ -1,12 +1,9 @@
 import * as Koa from 'koa'
 import * as logger from 'koa-logger'
 import api from './api'
-import {initializeQneCore, QneCore} from 'qne-core';
+import {QneOptions} from 'qne-core';
 
-const config = {
-  port: 3000,
-  debug: true
-};
+const config: QneOptions = new QneOptions(":memory:", true);
 
 /**
  * setup Koa
@@ -20,8 +17,8 @@ if (config.debug){
 }
 
 // add server API
-//api(config, app);
+api(config, app);
 
 // listen
-app.listen(config.port);
-console.log('listening on port ' + config.port);
+app.listen(3000);
+console.log('listening on port 3000');

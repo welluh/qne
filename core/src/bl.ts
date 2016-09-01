@@ -6,9 +6,9 @@ export interface BL{
 }
 export function initializeBl(opts: QneOptions): BL {
   async function getQuestionnaires(): Promise<[Questionnaire]> {
-    return new Promise<[Questionnaire]>(resolve => {
+    return new Promise<[Questionnaire]>((resolve, reject) => {
       const test = new Questionnaire('TEST_UUID', 1, 2);
-      [test]
+      resolve([test]);
     })
   }
   return {

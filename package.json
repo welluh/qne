@@ -1,6 +1,6 @@
 {
   "name": "qne-root",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "private": true,
   "description": "Questionnaire Service – Root",
   "devDependencies": {
@@ -10,7 +10,7 @@
   },
   "scripts": {
     "clean": "cd ./core && npm run clean && cd ../server && npm run clean && cd .. && npm-workspace clean",
-    "start": "npm install && npm-workspace install",
+    "start": "npm install && npm-workspace install && cd ./core && npm run build && cd ../server && npm run build",
     "TESTstart": "concurrently \"cd ./core && npm start\" \"cd ./server && npm start\" ",
     "TESTbuild-core": "cd core && npm install",
     "TESTbuild-server": "cd server && npm install",

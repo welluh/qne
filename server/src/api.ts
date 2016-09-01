@@ -1,9 +1,10 @@
+import * as Koa from 'koa'
 import * as bodyParser from 'koa-bodyparser';
 import * as route from 'koa-route';
-import * as core from 'qne-core';
+import {initializeQneCore, QneCore, QneOptions} from 'qne-core';
 
-export default function init(config, app) {
-
+export default function init(config: QneOptions, app: Koa) {
+  const core: QneCore = initializeQneCore(config)
   // API METHODS
 
   async function getQuestionnaires(ctx) {
@@ -11,7 +12,7 @@ export default function init(config, app) {
     ctx.body = responseFromCore;
   }
 
-  async function putQuestionnaire(ctx){
+/*  async function putQuestionnaire(ctx){
     let payload = ctx.request.body;
     let responseFromCore = await core.putQuestionnaire(payload);
     ctx.body = responseFromCore;
@@ -48,12 +49,13 @@ export default function init(config, app) {
     let responseFromCore = await core.getQuestions(path,lang);
     ctx.body = responseFromCore;
   }
-
+*/
 
   // ROUTES
 
   app.use(bodyParser());
   app.use(route.get('/v1/questionnaires', getQuestionnaires));
+  /*
   app.use(route.put('/v1/questionnaires', putQuestionnaire));
   app.use(route.del('/v1/questionnaires/:uuid', deleteQuestionnaire));
   app.use(route.get('/v1/questionnaires/:uuid', getQuestionnaire));
@@ -61,4 +63,5 @@ export default function init(config, app) {
   app.use(route.post('/v1/questionnaires/:uuid/close', closeQuestionnaire));
   app.use(route.put('/v1/questionnaires/:uuid', updateQuestionnaire));
   app.use(route.get('/v1/questions/:path',getQuestions));
+  */
 }

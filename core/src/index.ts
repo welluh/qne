@@ -1,4 +1,4 @@
-import QneOptions from './QneOptions';
+import Opts from './QneOptions';
 import {initializeBl, BL} from './bl';
 import Questionnaire from './domain/Questionnaire';
 
@@ -7,11 +7,13 @@ import Questionnaire from './domain/Questionnaire';
 //const validateQuestionnaire = ajv().compile(myJsonSchema);
 //const validateResponses = ajv().compile(myJsonSchema);
 
+export class QneOptions extends Opts{};
+
 export interface QneCore{
   getQuestionnaires(): Promise<[Questionnaire]>;
 }
 
-export default function initializeQneCore(opts: QneOptions) {
+export function initializeQneCore(opts: QneOptions) {
   const bl: BL = initializeBl(opts);
 
   async function getQuestionnaires() {

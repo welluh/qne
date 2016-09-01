@@ -18,6 +18,9 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
-# Custom
-dist/
+# Typescript
 typings/
+
+# Transient directories for distribution and build
+dist/
+build/
