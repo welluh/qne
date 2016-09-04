@@ -10,10 +10,10 @@
   },
   "scripts": {
     "clean": "cd ./core && npm run clean && cd ../server && npm run clean && cd .. && npm-workspace clean",
+    "build:core-watch": "cd ./core && npm run build:watch",
+    "build:server-watch": "cd ./server && npm run build:watch",
+    "build:watch": "concurrently \"npm run build:core-watch\" \"npm run build:server-watch\" ",
     "start": "npm install && npm-workspace install && cd ./core && npm run postinstall-build && cd ../server && npm run postinstall-build",
-    "TESTstart": "concurrently \"cd ./core && npm start\" \"cd ./server && npm start\" ",
-    "TESTbuild-core": "cd core && npm install",
-    "TESTbuild-server": "cd server && npm install",
     "TESTwatch-core-test": "nodemon -e js,json,handlebars node_modules/mocha/bin/mocha core/test/ --recursive --growl --reporter spec",
     "TESTwatch-client-test": "nodemon -e js,json,handlebars node_modules/mocha/bin/mocha core/test/ --recursive --growl --reporter spec",
     "TESTwatch-server-test": "nodemon -e js,json,handlebars node_modules/mocha/bin/mocha core/test/ --recursive --growl --reporter spec"

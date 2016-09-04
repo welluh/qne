@@ -30,6 +30,7 @@
     "clean": "rimraf build && rimraf typings",
     "prebuild": "rimraf build",
     "build": "tsc",
+    "build:watch": "tsc --watch",
     "postinstall": "typings install",
     "postinstall-build": "npm run postinstall && npm run build"
   },
