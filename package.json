@@ -10,7 +10,7 @@
   },
   "scripts": {
     "clean": "cd ./core && npm run clean && cd ../server && npm run clean && cd .. && npm-workspace clean",
-    "start": "npm install && npm-workspace install && cd ./core && npm run build && cd ../server && npm run build",
+    "start": "npm install && npm-workspace install && cd ./core && npm run postinstall-build && cd ../server && npm run postinstall-build",
     "TESTstart": "concurrently \"cd ./core && npm start\" \"cd ./server && npm start\" ",
     "TESTbuild-core": "cd core && npm install",
     "TESTbuild-server": "cd server && npm install",
