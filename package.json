@@ -14,11 +14,10 @@
     "test:core-watch": "cd ./core && npm run test:watch",
     "build:server-watch": "cd ./server && npm run build:watch",
     "test:server-watch": "cd ./server && npm run test:watch",
-    "build:watch": "concurrently \"npm run build:core-watch\" \"npm run test:core-watch\" \"npm run build:server-watch\" \"npm run test:server-watch\" ",
-    "start": "npm install && npm-workspace install && cd ./core && npm run postinstall-build && cd ../server && npm run postinstall-build",
-    "TESTwatch-core-test": "nodemon -e js,json,handlebars node_modules/mocha/bin/mocha core/test/ --recursive --growl --reporter spec",
-    "TESTwatch-client-test": "nodemon -e js,json,handlebars node_modules/mocha/bin/mocha core/test/ --recursive --growl --reporter spec",
-    "TESTwatch-server-test": "nodemon -e js,json,handlebars node_modules/mocha/bin/mocha core/test/ --recursive --growl --reporter spec"
+    "start:server-watch": "cd ./server && npm run start:watch",
+    "build:watch": "concurrently \"npm run build:core-watch\" \"npm run build:server-watch\" \" ",
+    "start": "npm install && npm-workspace install && cd ./core && npm run postinstall-build && cd ../server && npm run postinstall-build && npm run start",
+    "dev": "concurrently \"npm run build:core-watch\" \"npm run test:core-watch\" \"npm run build:server-watch\" \"npm run start:server-watch\" \"npm run test:server-watch\" "
   },
   "repository": {
     "type": "git",

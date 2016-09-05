@@ -7,6 +7,11 @@ export default function init(config: QneOptions, app: Koa) {
   const core: QneCore = initializeQneCore(config)
   // API METHODS
 
+  async function getRoot(ctx) {
+    let responseFromCore = await core.getRoot();
+    ctx.body = responseFromCore;
+  }
+
   async function getQuestionnaires(ctx) {
     let responseFromCore = await core.getQuestionnaires();
     ctx.body = responseFromCore;
@@ -54,6 +59,8 @@ export default function init(config: QneOptions, app: Koa) {
   // ROUTES
 
   app.use(bodyParser());
+
+  app.use(route.get('/v1', getRoot));
   app.use(route.get('/v1/questionnaires', getQuestionnaires));
   /*
   app.use(route.put('/v1/questionnaires', putQuestionnaire));

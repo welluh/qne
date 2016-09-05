@@ -16,6 +16,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "chakram": "^1.5.0",
+    "concurrently": "^2.2.0",
     "mocha": "^3.0.2",
     "nodemon": "^1.10.2",
     "raw-loader": "^0.5.1",
@@ -37,8 +38,11 @@
     "build:watch": "webpack --watch",
     "postinstall": "typings install",
     "postinstall-build": "npm run postinstall && npm run build",
+    "start": "node dist/server/index.js",
+    "start:watch": "nodemon -w dist -w test -w ../core/build/src -e js dist/server/index.js",
     "test": "mocha test/**.js",
-    "test:watch": "nodemon -w dist -w test -w node_modules/qne-core/build/src -e js ./node_modules/.bin/mocha test/**.js"
+    "test:watch": "nodemon -w dist -w test -w ../core/build/src -e js ./node_modules/.bin/mocha test/**.js",
+    "start-test:watch": "concurrently \"npm run start:watch\" \"npm run test:watch\" "
   },
   "contributors": [
     "Timo Tiuraniemi <timo.tiuraniemi@iki.fi>"
