@@ -14,6 +14,10 @@
     "qne-core": "0.0.1"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
+    "chakram": "^1.5.0",
+    "mocha": "^3.0.2",
+    "nodemon": "^1.10.2",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.5.4",
     "ts-loader": "^0.8.1",
@@ -32,7 +36,9 @@
     "build": "webpack",
     "build:watch": "webpack --watch",
     "postinstall": "typings install",
-    "postinstall-build": "npm run postinstall && npm run build"
+    "postinstall-build": "npm run postinstall && npm run build",
+    "test": "mocha test/**.js",
+    "test:watch": "nodemon -w dist -w test -w node_modules/qne-core/build/src -e js ./node_modules/.bin/mocha test/**.js"
   },
   "contributors": [
     "Timo Tiuraniemi <timo.tiuraniemi@iki.fi>"

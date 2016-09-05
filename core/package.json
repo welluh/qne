@@ -14,7 +14,6 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "declaration-bundler-webpack-plugin": "^1.0.3",
     "mocha": "^3.0.2",
     "nodemon": "^1.10.2",
     "rimraf": "^2.5.4",
@@ -32,7 +31,9 @@
     "build": "tsc",
     "build:watch": "tsc --watch",
     "postinstall": "typings install",
-    "postinstall-build": "npm run postinstall && npm run build"
+    "postinstall-build": "npm run postinstall && npm run build",
+    "test": "mocha build/test/**.js",
+    "test:watch": "nodemon -w build -e js ./node_modules/.bin/mocha build/test/**.js"
   },
   "contributors": [
     "Timo Tiuraniemi <timo.tiuraniemi@iki.fi>"
