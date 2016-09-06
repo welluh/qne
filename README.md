@@ -4,25 +4,30 @@ This project is split into three separate Node.js modules:
 
 1. qne-core in the "core" folder
   * Contains database scripts and endpoints to JSON API validation, but is server agnostic.
-2. qne-client in the "client" folder
-  * Contains Angular 2 client sources.
-3. qne in the "server" folder
-  * This contains a standalone implementation of the questionnaire service, using Koa 2 as server and Angular Universal.
+2. qne-respondent in the "respondent" folder
+  * Contains lightweight Angular 2 sources compatible with a large number of browsers that implement the respondent's UI
+3. qne-admin in the "admin" folder
+  * Contains questionnaire admin UI Angular 2 sources, primarily for latest browsers.
+4. qne in the "server" folder
+  * This contains a standalone implementation of the questionnaire service, using Koa 2 as server and Angular Universal hosting for the qne-respondent module and static hosting for the qne-admin module.
 
-The reason for splitting the project in to three modules is to make it possible to easily attach qne to your existing server.
+The reason for splitting the project into four separate modules is to make it possible to easily attach qne to your existing server, and to make development of the frontend and backend independent.
 
 ## Compilation
 
-### qne-core
+Run
 
-When creating the backend Typescript interfaces from SQL database, clone [sequelize-auto-ts](https://github.com/keunlee/sequelize-auto-ts) and run
 ```
-npm install
-node lib/cli.js
+npm start
 ```
-to generate
 
-### qne-client
+to build everything and start the server listening at port 3000. Run
+
+```
+npm run dev
+```
+
+to begin listening to changes and running unit and integration tests.
 
 ## Development
 
