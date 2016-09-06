@@ -10,7 +10,7 @@
   "typings": "./build/src/index.d.ts",
   "dependencies": {
     "ajv": "^4.5.0",
-    "bcrypt": "^0.8.7"
+    "bcryptjs": "^2.3.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",

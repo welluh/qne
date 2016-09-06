@@ -1,6 +1,6 @@
 {
   "globalDependencies": {
-    "bcrypt": "registry:dt/bcrypt#0.0.0+20160316155526",
+    "bcryptjs": "registry:dt/bcryptjs#2.3.0+20151217030501",
     "chai": "registry:dt/chai#3.4.0+20160601211834",
     "mocha": "registry:dt/mocha#2.2.5+20160720003353"
   }
