@@ -35,7 +35,7 @@
     "clean": "rimraf dist && rimraf typings",
     "prebuild": "rimraf dist",
     "build": "webpack",
-    "build:watch": "webpack --watch",
+    "build:watch": "nodemon -w src -e ts ./node_modules/.bin/webpack",
     "postinstall": "typings install",
     "postinstall-build": "npm run postinstall && npm run build",
     "start": "node dist/server/index.js",
