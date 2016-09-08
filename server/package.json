@@ -35,13 +35,13 @@
     "clean": "rimraf dist && rimraf typings",
     "prebuild": "rimraf dist",
     "build": "webpack",
-    "build:watch": "nodemon -w src -e ts ./node_modules/.bin/webpack",
+    "build:watch": "nodemon -w src -e ts --exec \"node ./node_modules/webpack/bin/webpack",
     "postinstall": "typings install",
     "postinstall-build": "npm run postinstall && npm run build",
     "start": "node dist/server/index.js",
     "start:watch": "nodemon -w dist -w test -w ../core/build/src -e js dist/server/index.js",
     "test": "mocha test/**.js",
-    "test:watch": "nodemon -w dist -w test -w ../core/build/src -e js ./node_modules/.bin/mocha test/**.js",
+    "test:watch": "nodemon -w build -e js --exec \"node ./node_modules/mocha/bin/_mocha ./test/**.js\" ",
     "start-test:watch": "concurrently \"npm run start:watch\" \"npm run test:watch\" "
   },
   "contributors": [

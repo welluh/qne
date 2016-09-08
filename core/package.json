@@ -33,7 +33,7 @@
     "postinstall": "typings install",
     "postinstall-build": "npm run postinstall && npm run build",
     "test": "mocha build/test/**.js",
-    "test:watch": "nodemon -w build -e js ./node_modules/.bin/mocha build/test/**.js"
+    "test:watch": "nodemon -w build -e js --exec \"node ./node_modules/mocha/bin/_mocha ./build/test/**.js\" "
   },
   "contributors": [
     "Timo Tiuraniemi <timo.tiuraniemi@iki.fi>"
