@@ -1,6 +1,6 @@
 # Questionnaire Service for Node.js
 
-This project is split into three separate Node.js modules:
+This project is split into the following Node.js modules:
 
 1. qne-core in the "core" folder
   * Contains database scripts and endpoints to JSON API validation, but is server agnostic.
