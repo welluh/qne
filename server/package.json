@@ -11,7 +11,8 @@
     "koa-bodyparser": "^3.2.0",
     "koa-logger": "^2.0.0",
     "koa-route": "^3.2.0",
-    "qne-core": "0.0.1"
+    "qne-core": "0.0.1",
+    "qne-respondent": "0.0.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",

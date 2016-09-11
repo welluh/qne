@@ -3,10 +3,15 @@
   "version": "0.0.1",
   "description": "qne respondent client",
   "scripts": {
-    "start": "webpack-dev-server --inline --progress --port 8080",
-    "test": "karma start",
-    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
-    "postinstall": "typings install"
+    "clean": "rimraf dist && rimraf typings",
+    "prebuild": "rimraf dist",
+    "build": "webpack --config config/webpack.prod.js --progress --profile --bail",
+    "postinstall": "typings install",
+    "postinstall-build": "npm run postinstall && npm run build",
+    "api": "json-server --watch mock.api.json --port 3004",
+    "dev": "webpack-dev-server --inline --progress --port 8080",
+    "start": "concurrently \"npm run api\" \"npm run dev\" ",
+    "test": "karma start"
   },
   "dependencies": {
     "@angular/common": "2.0.0-rc.6",
@@ -17,6 +22,9 @@
     "@angular/platform-browser": "2.0.0-rc.6",
     "@angular/platform-browser-dynamic": "2.0.0-rc.6",
     "@angular/router": "3.0.0-rc.2",
+    "@ngrx/store": "2.1.2",
+    "@ngrx/effects": "2.0.0-beta.3",
+    "@ngrx/core": "1.1.0",
     "core-js": "^2.4.1",
     "rxjs": "5.0.0-beta.11",
     "zone.js": "^0.6.17"
@@ -24,11 +32,13 @@
   "devDependencies": {
     "angular2-template-loader": "^0.4.0",
     "css-loader": "^0.23.1",
+    "concurrently": "^2.2.0",
     "extract-text-webpack-plugin": "^2.0.0-beta",
     "file-loader": "^0.8.5",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.15.0",
     "jasmine-core": "^2.4.1",
+    "json-server": "^0.8.19",
     "karma": "^0.13.22",
     "karma-jasmine": "^0.3.8",
     "karma-phantomjs-launcher": "^1.0.0",

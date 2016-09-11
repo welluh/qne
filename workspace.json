@@ -2,6 +2,6 @@
   "links": {
     "qne-core": "core",
     "qne": "server",
-    "qne-client": "client"
+    "qne-respondent": "respondent"
   }
 }

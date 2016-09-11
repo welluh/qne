@@ -1,0 +1,155 @@
+{
+  "test-questionnaire": {
+    "uuid": "246680f6-ece4-4426-b003-92853e95ec85",
+    "defaultLang": "en",
+    "title": "Test Questionnaire",
+    "description": "This is a questionnaire suitable for testing",
+    "i18n": [{
+      "lang": "fi",
+      "title": "Testikysely",
+      "description": "Tämä on kysely joka soveltuu testaukseen"
+    }],
+    "submit": "efabf3d2-2f69-4419-9a9c-05f69261c876",
+    "instructions": [{
+      "uuid": "e1ccbcee-a8f6-41ee-80d3-f0c1b7788f15",
+      "type": "likert",
+      "title": "Choose the value that matches reality",
+      "description": "Don't overthink, the first answer is probably the right one",
+      "options": [{
+        "value": 1,
+        "title": "Strongly disagree",
+        "i18n": [{
+          "lang": "fi",
+          "title": "Vahvasti eri mieltä"
+        }]
+      },{
+        "value": 2,
+        "title": "Disagree",
+        "i18n": [{
+          "lang": "fi",
+          "title": "Eri mieltä"
+        }]
+      },{
+        "value": 3,
+        "title": "Neither agree nor disagree",
+        "i18n": [{
+          "lang": "fi",
+          "title": "En samaa enkä eri mieltä"
+        }]
+      },{
+        "value": 4,
+        "title": "Agree",
+        "i18n": [{
+          "lang": "fi",
+          "title": "Samaa mieltä"
+        }]
+      },{
+        "value": 5,
+        "title": "Strongly agree",
+        "i18n": [{
+          "lang": "fi",
+          "title": "Vahvasti samaa mieltä"
+        }]
+      }]
+    }],
+    "actions":[{
+      "uuid": "3b99828b-852b-478a-a976-84b51a3214b8",
+      "type": "button",
+      "title": "Begin",
+      "i18n": [{
+        "lang": "fi",
+        "title": "Aloita"
+      }]
+    },
+    {
+      "uuid": "efabf3d2-2f69-4419-9a9c-05f69261c876",
+      "type": "button",
+      "title": "Submit",
+      "i18n": [{
+        "lang": "fi",
+        "title": "Tallenna"
+      }]
+    }],
+    "groups": [{
+      "uuid": "eaa72239-e6c1-4078-8215-93a5cad2ad24",
+      "type": "action",
+      "elements": [{
+        "uuid": "713e32f8-027d-4a49-ae7b-c6bfe59c8695",
+        "type": "text",
+        "title": "This is the first view of the questionnaire",
+        "description": "As this is inside a group of type 'action', the user needs to push a button after reading this.",
+        "i18n": [{
+          "lang": "fi",
+          "title": "Tämä on kyselyn ensimmäinen näkymä",
+          "description": "Koska tämä on ryhmässä tyyppiä 'action', käyttäjän pitää painaa nappulaa pohjalla, että pääsee jatkamaan."
+        }]
+      }],
+      "action": "3b99828b-852b-478a-a976-84b51a3214b8"
+    },
+    {
+      "uuid": "eaa72239-e6c1-4078-8215-93a5cad2ad24",
+      "type": "normal",
+      "elements": [{
+        "uuid": "8dee78e2-2f01-410e-beca-53d4b6766a08",
+        "type": "likert",
+        "title": "This looks like the best possible questionnaire",
+        "i18n": [{
+          "lang": "fi",
+          "title": "Tämä näyttää parhaalta mahdolliselta kyselyltä"
+        }],
+        "required": true,
+        "instruction": "e1ccbcee-a8f6-41ee-80d3-f0c1b7788f15"
+      },
+      {
+        "uuid": "878ee544-6b3b-4588-b6af-e5046501ff8b",
+        "type": "likert",
+        "title": "I love filling out this questionnaire",
+        "description": "(Because this is the middle question of a normal group, I should kinda see the previous and next question.)",
+        "i18n": [{
+          "lang": "fi",
+          "title": "Rakastan tähän kyselyyn vastaamista",
+          "description": "(Koska tämä on keskimmäinen kysymys ryhmässä tyyppiä 'normal', edellinen ja seuraava kysymys pitäisi näkyä jollain tavoin.)"
+        }],
+        "required": true,
+        "instruction": "e1ccbcee-a8f6-41ee-80d3-f0c1b7788f15"
+      },
+      {
+        "uuid": "3c159b26-e072-4012-868b-d26d1ec9a964",
+        "type": "textarea",
+        "title": "Comments?",
+        "i18n": [{
+          "lang": "fi",
+          "title": "Kommentteja?"
+        }],
+        "required": false
+      }]
+    },
+    {
+      "uuid": "6603933e-cef5-460f-989c-d9efefff983e",
+      "type": "expanded",
+      "elements": [{
+        "uuid": "267ad9e0-fbac-456f-b739-40cb44ab73ee",
+        "type": "likert",
+        "title": "This was the best possible questionnaire",
+        "i18n": [{
+          "lang": "fi",
+          "title": "Tämä oli paras mahdollinen kysely"
+        }],
+        "required": true,
+        "instruction": "e1ccbcee-a8f6-41ee-80d3-f0c1b7788f15"
+      },
+      {
+        "uuid": "749f6333-7b65-497d-804d-fc9294a1d2a5",
+        "type": "checkbox",
+        "title": "I agree",
+        "description": "(Because this is in a 'expanded' group, this question should be visible at the same time as the above, if possible)",
+        "i18n": [{
+          "lang": "fi",
+          "title": "Olen samaa mieltä",
+          "description": "(Koska tämä on kysymys ryhmässä tyyppiä 'expanded', tämä pitäisi näkyä aina kun mahdollista samaan aikaan kuin ylempi.)"
+        }],
+        "required": false
+      }]
+    }]
+  }
+}
