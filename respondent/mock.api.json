@@ -71,7 +71,6 @@
       }]
     }],
     "groups": [{
-      "uuid": "eaa72239-e6c1-4078-8215-93a5cad2ad24",
       "type": "action",
       "elements": [{
         "uuid": "713e32f8-027d-4a49-ae7b-c6bfe59c8695",
@@ -87,7 +86,6 @@
       "action": "3b99828b-852b-478a-a976-84b51a3214b8"
     },
     {
-      "uuid": "eaa72239-e6c1-4078-8215-93a5cad2ad24",
       "type": "normal",
       "elements": [{
         "uuid": "8dee78e2-2f01-410e-beca-53d4b6766a08",
@@ -125,7 +123,6 @@
       }]
     },
     {
-      "uuid": "6603933e-cef5-460f-989c-d9efefff983e",
       "type": "expanded",
       "elements": [{
         "uuid": "267ad9e0-fbac-456f-b739-40cb44ab73ee",
