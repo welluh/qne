@@ -13,6 +13,10 @@ This project is split into the following Node.js modules:
 
 The reason for splitting the project into four separate modules is to make it possible to easily attach qne to your existing server, and to make development of the frontend and backend independent.
 
+## API
+
+See the [API documentation](docs/APIv1.md) for in depth information about the qne API.
+
 ## Compilation
 
 Run
