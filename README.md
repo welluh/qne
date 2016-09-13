@@ -1,5 +1,7 @@
 # Questionnaire Service for Node.js
 
+[![Build Status](https://travis-ci.org/filosofianakatemia/qne.svg?branch=master)](https://travis-ci.org/filosofianakatemia/qne)
+
 This project is split into the following Node.js modules:
 
 1. qne-core in the "core" folder
