@@ -7,6 +7,4 @@ notifications:
 install:
 - npm install
 - npm-workspace install
-- typings install
-- tsc
-- webpack
+
