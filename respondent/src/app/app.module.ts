@@ -3,8 +3,8 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { QuestionComponent } from './question.component';
-import { QuestionService } from './question.service';
+import { QuestionnaireComponent } from './questionnaire.component';
+import { QuestionnaireService } from './questionnaire.service';
 
 @NgModule({
   imports: [
@@ -13,14 +13,14 @@ import { QuestionService } from './question.service';
   ],
   declarations: [
     AppComponent,
-    QuestionComponent
+    QuestionnaireComponent
   ],
   providers: [
-      QuestionService
+      QuestionnaireService
   ],
-  bootstrap: [ 
-    AppComponent, 
-    QuestionComponent 
+  bootstrap: [
+    AppComponent,
+    QuestionnaireComponent
   ]
 })
 
