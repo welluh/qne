@@ -1,19 +1,34 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+
+import { Questionnaire } from './questionnaire';
 
 @Injectable()
-export class QuestionnaireService{
-  questionnaire:Array<any>;
+export class QuestionnaireService {
+  mode = 'Observable';
 
-  constructor(private http:Http){}
+  private _apiUrl: string;
 
-  getQuestions(){
-    return this.http.request('../../mock.api.json')
-      .map(response => response.json());
+  constructor(private _http: Http) {
+    this._apiUrl = 'http://localhost:3004/test-questionnaire';
   }
 
-  saveAnswers(){
-    return 0;
+  private static handleError (error: any) {
+    // @TODO replace with real logging
+    const errMsg = error.message
+      ? error.message
+      : error.status
+        ? `${error.status} - ${error.statusText}`
+        : 'Server error';
+
+    console.error(errMsg);
+    return Observable.throw(errMsg);
   }
 
+  getQuestions(): Observable<Questionnaire[]> {
+    return this._http.get(this._apiUrl)
+      .map(response => <Questionnaire[]>response.json())
+      .catch(QuestionnaireService.handleError);
+  }
 }
