@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { QuestionnaireService } from './questionnaire.service';
-import { Questionnaire } from './questionnaire';
+import { Questionnaire } from './questionnaire.model';
 
 @Component({
   selector: 'questionnaire',
