@@ -1,3 +1,10 @@
+@import '../assets/global';
+
+body {
+  background-color: map-get($brand-color, blue);
+  color: map-get($brand-color, white);
+}
+
 main {
   padding: 1em;
   font-family: Arial, Helvetica, sans-serif;
